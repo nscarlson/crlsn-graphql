@@ -1,0 +1,63 @@
+{
+    "name": "crlsn-graphql",
+    "version": "0.0.1",
+    "description": "",
+    "main": "src/services/server/server.js",
+    "scripts": {
+        "build": "yarn webpack --config webpack.config.babel.js --progress",
+        "build-dev": "yarn build --watch",
+        "build-prod": "yarn build --progress=false -p",
+        "clean": "rm -rfv coverage/ dist/ private/",
+        "dev": "yarn stop && yarn start-dev && yarn logs",
+        "lint": "eslint *.js src",
+        "logs": "pm2 logs $(basename `pwd`)",
+        "start": "pm2 start process.config.js",
+        "start-dev": "pm2 start process.config.js --watch",
+        "stop": "pm2 stop process.config.js",
+        "test": "yarn jest -c jest.config.js",
+        "test-clean": "yarn test -- --no-cache"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/nscarlson/crypto-tools.git"
+    },
+    "keywords": [
+        "Node",
+        "React",
+        "Redux",
+        "isomorphic"
+    ],
+    "author": "https://github.com/nscarlson",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/nscarlson/crypto-tools/issues"
+    },
+    "dependencies": {
+        "@gramps/gramps": "^1.1.0",
+        "axios": "^0.17.1",
+        "babel-core": "^6.26.0",
+        "babel-loader": "^7.1.2",
+        "babel-polyfill": "^6.26.0",
+        "babel-preset-env": "^1.6.1",
+        "babel-preset-react": "^6.24.1",
+        "babel-preset-stage-0": "^6.24.1",
+        "bignumber.js": "^5.0.0",
+        "body-parser": "^1.18.2",
+        "data-source-crlsn": "git+ssh://git@github.com/nscarlson/data-source-crlsn.git",
+        "express": "^4.16.2",
+        "extract-text-webpack-plugin": "^3.0.2",
+        "graphql": "^0.13.1",
+        "graphql-redis-subscriptions": "^1.4.0",
+        "graphql-relay": "0.5.4",
+        "graphql-server-express": "^1.3.2",
+        "graphql-subscriptions": "^0.5.6",
+        "graphql-tools": "^2.14.1",
+        "ioredis-mock": "^3.5.0",
+        "promise-redis": "^0.0.5",
+        "request": "^2.83.0",
+        "socket.io-client": "^2.0.4",
+        "uuid": "^3.2.1",
+        "webpack": "^3.11.0",
+        "ws": "^3.3.3"
+    }
+}
