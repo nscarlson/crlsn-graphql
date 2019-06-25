@@ -33,7 +33,7 @@
         "url": "https://github.com/nscarlson/crypto-tools/issues"
     },
     "dependencies": {
-        "@gramps/gramps": "^1.1.0",
+        "@gramps/gramps": "^3.0.0",
         "axios": "^0.17.1",
         "babel-core": "^6.26.0",
         "babel-loader": "^7.1.2",
